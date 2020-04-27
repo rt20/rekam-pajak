@@ -25,17 +25,16 @@ class PajakController extends Controller
     {
         #identifikasi siapa yang login
         $user = Auth::user()->id;
-        // $items=Pajak::all();
+        
         
         $items = Pajak::where('user_id',$user)
                     ->orderBy('id', 'desc')
                     ->paginate(10);
         
-        // return view('pages.pajak.index', compact('items'));
+        
         return view ('pages.pajak.index')->with([
             'items' => $items
         ]);
-       
     }
 
     /**
@@ -73,7 +72,8 @@ class PajakController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        
     }
 
     /**
@@ -115,7 +115,6 @@ class PajakController extends Controller
     }
     public function export() 
     {
-    
         return Excel::download(new PajakExport, 'pajak.xlsx');
     }
 }

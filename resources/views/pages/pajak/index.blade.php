@@ -27,7 +27,7 @@
       <div class="card">
         <div class="card-header">
         <a href="{{ route('pajak.create') }}" class="btn btn-primary mb-3">Rekam Pajak</a>
-        <!-- <a href="{{ route('pajak.export') }}" class="btn btn-success mb-3 ml-4">Ekspor</a> -->
+        <a href="{{ route('export') }}" class="btn btn-success mb-3 ml-4">Ekspor</a>
           <table class="table">
             <thead class="thead-light">
           <tr>
@@ -60,28 +60,20 @@
               <form action="{{ route('pajak.destroy', $item->id)}}" method="post" class="d-inline">
             @csrf
                 @method('delete')
-                
-                  <button class="btn btn-danger btn-sm" 
-                  
+                  <button class="btn btn-danger btn-sm"                  
                   onclick="return confirm('Apakah anda yakin ?')">
                                     <i class="fa fa-trash"></i>
                                     </button>
               </form>
-          </td>
-                                
+          </td>                               
           </tr>
                             @empty
                                <tr>
                                <td colspan="6" class="text-center" p-5>
                                Data tidak tersedia
                                </td>
-                               
                                </tr>
               @endforelse
-
-                           
-
-
             </tbody>
      </table>     
         </div>
