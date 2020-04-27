@@ -13,13 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes(['register' => false]);
+Route::get('/', function ($guard = null) {
+    if (Auth::guard($guard)->check()) {
+        return redirect('/dashboard');
+    }
+    else {
+        return view('auth.login');
+    }
+    
 });
+
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 # Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('pajak','PajakController');
+
+Route::get('pajak/export/', 'PajakController@export')->name('pajak.export');    # export data
