@@ -59,7 +59,7 @@ class PajakController extends Controller
         $data['user_id']=auth()->id();
 
         Pajak::create($data);
-        // $data->save();
+        
         flash('Pajak berhasil ditambahkan')->success();
         return redirect()->route('pajak.index');
     }

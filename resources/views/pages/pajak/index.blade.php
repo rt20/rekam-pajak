@@ -26,7 +26,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-        <a href="{{ route('pajak.create') }}" class="btn btn-primary mb-3">Rekam Pajak</a>
+        <a href="{{ route('pajak.create') }}" class="btn btn-primary mb-3">Tambah</a>
         <a href="{{ route('export') }}" class="btn btn-success mb-3 ml-4">Ekspor</a>
           <table class="table">
             <thead class="thead-light">
@@ -83,9 +83,10 @@
         <!-- /.card-footer-->
       </div>
       <!-- /.card -->
-
+      {!! $items->render() !!}
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+ 
   @endsection

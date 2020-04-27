@@ -100,8 +100,8 @@
                 15 %
                <br>
                
-               <input type="checkbox"  >
-               Lainnya:<input type="text"  name="pajak[]" value="{{old('other')}}" class="form-control form-control-sm">
+               <input type="checkbox" id="other"  >
+               Lainnya:<input type="text"  id="other" name="pajak[]" value="{{old('other')}}" class="form-control form-control-sm">
                </div>
                </div>
 
