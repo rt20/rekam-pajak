@@ -43,7 +43,7 @@
           </div>
           <div class="col-sm-4"><br>
           <select name="pemungut" class="form-control form-control-sm" required>
-               <option value="">- Pilih Pemungut Pajak</option>
+               <option disabled="disabled" selected="selected" value="">- Pilih Pemungut Pajak</option>
                <option value="Bendahara Pengeluaran Satker Deputi 3">Bendahara Pengeluaran Satker Deputi 3</option>
                <option value="Bendahara Pengeluaran Satker Deputi 2">Bendahara Pengeluaran Satker Deputi 2</option>
                <option value="Bendahara Pengeluaran Satker Deputi 1">Bendahara Pengeluaran Satker Deputi 1</option>
@@ -61,7 +61,7 @@
           </div>
           <div class="col-sm-4"><br>
           <select name="perolehan" class="form-control form-control-sm" required>
-               <option value="">- Pilih Perolehan Pendapatan</option>
+               <option disabled="disabled" selected="selected" value="">- Pilih Perolehan Pendapatan </option>
                <option value="Narasumber">Narasumber</option>
                <option value="Moderator">Moderator</option>
                <option value="RDK">RDK</option>
@@ -104,7 +104,15 @@
                Lainnya:<input type="text"  id="other" name="pajak[]" value="{{old('other')}}" class="form-control form-control-sm">
                </div>
                </div>
-
+               <div class="row">
+     <div class="col-md-2"><br>
+          Keterangan
+          </div>
+          <div class="col-sm-4">
+          <br> 
+          <input type="text" name="keterangan" class="form-control" value="{{old('keterangan')}}">
+        </div>
+     </div>
      
      <div class="col-md-6 mt-3">
           <button type="submit" class="btn btn-primary">Simpan</button>

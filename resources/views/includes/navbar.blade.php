@@ -47,12 +47,12 @@
                   </div>
                @else
                  <div class="pull-left">
-                    <a href="{{ url('profile') }}" class="dropdown-item">Profile</a>
+                    <a href="{{ route('user.index') }}" class="dropdown-item">Profil</a>
                   </div>
 
                  <div class="pull-right">
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                    Logout
+                    Keluar
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}

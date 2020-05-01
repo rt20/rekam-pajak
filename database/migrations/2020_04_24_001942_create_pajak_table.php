@@ -21,6 +21,7 @@ class CreatePajakTable extends Migration
             $table->integer('bruto');
             $table->integer('netto');
             $table->string('pajak');
+            $table->string('keterangan');
 
             $table->timestamps();
         });

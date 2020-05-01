@@ -29,7 +29,8 @@ class PajakRequest extends FormRequest
             'perolehan' => 'required|max:255',
             'bruto' => 'required|integer',
             'netto' => 'required|integer',
-            'pajak' => 'required'
+            'pajak' => 'required',
+            'keterangan' => 'max:255'
         ];
     }
 }

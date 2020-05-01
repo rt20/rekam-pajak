@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/', function ($guard = null) {
     if (Auth::guard($guard)->check()) {
         return redirect('/dashboard');
@@ -35,5 +34,6 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 # Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('pajak','PajakController');
+Route::resource('user','UserController');
   
 Route::get('export','PajakController@export')->name('export'); # export data
