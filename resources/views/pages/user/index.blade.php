@@ -22,7 +22,7 @@
 
     <!-- Main content -->
     <section class="content">
-    
+    @include('flash::message')
       <!-- Default box -->
       <div class="card">
         <div class="card-header">

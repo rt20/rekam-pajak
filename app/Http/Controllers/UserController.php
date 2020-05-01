@@ -84,6 +84,7 @@ class UserController extends Controller
 
         $item = User::findOrFail($id);
         $item->update($data);
+        flash('Profil berhasil diubah')->success();
         return redirect()->route('user.index');
     }
 
