@@ -17,7 +17,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('NIP') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('User') }}</label>
 
                             <div class="col-md-6">
                                 <input id="text" type="text"  class="form-control @error('email') is-invalid @enderror" 
@@ -67,8 +67,10 @@
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif -->
+                                @endif --><br><br>
+                               <label> <a href="{{ route('register') }}">Register</a></label>
                             </div>
+                           
                         </div>
                     </form>
                 </div>

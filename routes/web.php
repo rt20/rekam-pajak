@@ -24,7 +24,7 @@ Route::get('/', function ($guard = null) {
 });
 
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 // Route::get('/', function () {
 //     return view('welcome');
 // });
